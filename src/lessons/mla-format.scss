@@ -1,0 +1,102 @@
+* {
+    line-height: 2rem;
+    text-decoration: none;
+}
+
+.regular-line-height {
+    line-height: 0;
+}
+
+.page {
+    margin: 1rem 0;
+    padding: 1in;
+    background-color: #fff;
+    min-height: 11.5in;
+    // height: 11in;
+    // width: 8.5in;
+
+    &-container {
+        background-color: #aaa;
+    }
+}
+
+.essay {
+    &__left {
+        text-align: left;
+    }
+
+    &__right {
+        text-align: right;
+    }
+
+    &__center {
+        text-align: center;
+    }
+
+    &__indented {
+        text-indent: 1in;
+    }
+}
+
+.text {
+    &-red {
+        color: lightcoral;
+    }
+
+    &-blue {
+        color: skyblue;
+    }
+
+    &-green {
+        color: green;
+    }
+
+    &-link {
+        color: blue;
+    }
+
+    &-hl {
+        background: #ff0;
+    }
+
+    &-bold {
+        font-weight: 700;
+    }
+
+    &-subtitle {
+        font-style: 2rem;
+    }
+
+    &-underline {
+        text-decoration: underline;
+    }
+
+    &-st {
+        text-decoration: line-through;
+    }
+}
+
+@media (min-width: 1600px) {
+    .page-container {
+        font-size: 125%;
+    }
+
+    .page {
+        padding: 1.25in;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .page-container {
+        font-size: 75%;
+    }
+
+    .page {
+        padding: .75in;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .page-container {font-size: 62.5%;}
+    .page {padding: .5in;}
+}
