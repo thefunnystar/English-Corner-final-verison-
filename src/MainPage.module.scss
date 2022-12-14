@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+$color-Lessons: #009eeb;
+
+.App {
+    background-color: #f7f7f7;
+    padding-bottom: 2rem;
+}
+
+.MainPage {
+
+    &__Title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 4rem;
+
+        &--Heading {
+            font-family: 'Dancing Script', cursive;
+            padding-top: 4rem;
+            font-size: 3rem;
+            background-clip: text;
+            background: #ABCF19;
+            background: linear-gradient(to bottom right, gold 0%, yellow 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &--Divider {
+            transform: translateY(-1rem);
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__Lessons {
+        font-weight: bold;
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        color: $color-Lessons;
+
+        & > * {
+            margin: 2rem 0;
+        }
+    }
+}
+
+.Grid {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(min-width: 869px) {
+
+}
