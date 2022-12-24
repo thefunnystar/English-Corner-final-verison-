@@ -1,0 +1,48 @@
+.App {
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.modal {
+  &-wrapper {
+    height: 100vh;
+    background-color: #333;
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__languages {
+    display: flex;
+    justify-content: center;
+
+    & > * {
+      width: 8rem;
+      height: 6rem;
+      margin: 0 6px;
+      cursor: pointer;
+      background-color: #f2f2f2;
+      border: 1px solid #333;
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .modal {
+    &-wrapper {
+      background: #fff;
+    }
+    &__heading {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+  }
+}

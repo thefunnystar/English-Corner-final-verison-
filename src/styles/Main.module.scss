@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+$color-Lessons: #009eeb;
+
+.App {
+  background-color: #f7f7f7;
+}
+
+.MainPage {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__CenterBox {
+    width: 100%;
+  }
+
+  &__Title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &--Heading {
+      font-family: "Dancing Script", cursive;
+      //padding-top: 4rem;
+      font-size: 2.85rem;
+      line-height: 2.85rem;
+      background-clip: text;
+      background: #abcf19;
+      background: linear-gradient(to bottom right, gold 0%, yellow 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      height: 50px;
+    }
+
+    &--Divider {
+      transform: translateY(-1rem);
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__Lessons {
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: $color-Lessons;
+
+    a {
+      cursor: pointer;
+      margin: 2rem 0.5rem;
+    }
+  }
+}
+
+.Grid {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 992px) {
+  .Mainpage {
+    &__Title {
+      &--Heading {
+        font-size: 2.1375rem !important;
+        line-height: 2.1375rem !important;
+      }
+    }
+    p {
+      font-size: 87.5%;
+      line-height: 87.5%;
+    }
+    a {
+      font-size: 75%;
+      line-height: 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .MainPage {
+    &__Title {
+      &--Heading {
+        font-size: 1.425rem !important;
+        line-height: 1.425rem !important;
+      }
+    }
+    p {
+      font-size: 75%;
+      line-height: 75%;
+    }
+    a {
+      font-size: 50%;
+      line-height: 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .MainPage__CenterBox {
+    margin-bottom: 26rem;
+  }
+  .MainPage {
+    &__Title {
+      margin-top: 28.5rem;
+      &--Heading {
+        font-size: 1.425rem !important;
+        line-height: 1.425rem !important;
+      }
+      &--Divider {
+        transform: translateY(-1rem);
+        margin-top: 1.5rem;
+        margin-bottom: 1.25rem;
+      }
+      &--Text {
+        text-align: center;
+      }
+    }
+    &__Lessons {
+      margin-top: 1rem;
+    }
+    p {
+      font-size: 75%;
+      line-height: 100%;
+    }
+    a {
+      font-size: 50%;
+      line-height: 100%;
+    }
+  }
+}

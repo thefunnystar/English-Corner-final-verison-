@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+
+$blue-600: #0a58ca;
+$indigo-600: #520dc2;
+
+.Head {
+  background: linear-gradient(to right, limegreen, lime);
+  height: 4rem;
+  display: flex;
+  //position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+
+  &__title {
+    font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+    margin: auto auto auto 1rem;
+    color: #333;
+    cursor: pointer;
+  }
+
+  &__translation-icon {
+    height: 3.25rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+}
+
+.Foot {
+  background: linear-gradient(to right, $blue-600, $indigo-600);
+  height: 3rem;
+  display: flex;
+  // position: absolute;
+  // bottom: 0;
+  width: 100%;
+
+  &__right {
+    margin-left: auto;
+    font-size: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  &__left {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    &--location {
+      font-size: 2rem;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    &--svg {
+      transform: translateY(0rem);
+      height: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .Head {
+    height: 3rem;
+
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__translation-icon {
+      height: 2.4375rem;
+    }
+  }
+
+  .Foot {
+    height: 2.25rem;
+
+    &__right,
+    &__left {
+      font-size: 1.5rem;
+    }
+
+    &__left {
+      &--location {
+        font-size: 1.5rem;
+      }
+
+      &--svg {
+        transform: translateY(0rem);
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 1.125rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Head {
+    height: 2rem;
+
+    &__title {
+      font-size: 1rem;
+    }
+
+    &__translation-icon {
+      height: 1.625rem;
+    }
+  }
+
+  .Foot {
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+
+    &__right,
+    &__left {
+      font-size: 1rem;
+    }
+
+    &__left {
+      display: flex;
+      transform: translateX(-0.5rem);
+
+      &--location {
+        font-size: 1rem;
+      }
+
+      &--svg {
+        transform: translateY(-0rem);
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 1rem;
+      }
+    }
+
+    &__right {
+      display: none;
+    }
+  }
+}
